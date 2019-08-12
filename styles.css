@@ -1,0 +1,267 @@
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+svg g.outline rect {
+    stroke-width: 1px;
+    stroke: rgb(255, 64, 129);
+}
+
+svg g.labels {
+    pointer-events: none;
+}
+
+svg g text.type {
+    font-size: 1.3em;
+    color: black;
+}
+
+svg g text.description {
+    font-size: 1.1em;
+    color: black;
+}
+
+svg g text.type.vertical, svg g text.description.vertical {
+    text-anchor: end;
+    transform: rotate(-90deg);
+}
+
+svg g text.value {
+    text-anchor: middle;
+    dominant-baseline: central;
+    font-size: 1.5em;
+}
+
+.root header .mdl-button {
+    position: relative;
+    margin: 0px 5px;
+    top: 25px
+}
+
+.root input[type=file] {
+    display: none;
+}
+
+.bitstream-view {
+    height: 100%;
+}
+
+.data-view {
+    height: 100%;
+}
+
+.data-view .mdl-grid {
+    padding: 0px 8px;
+}
+
+.data-view .mdl-grid .mdl-cell {
+    height: calc(100% - 16px);
+}
+
+.data-view .mdl-grid.crumbs {
+    height: 40px;
+}
+
+.data-view .mdl-grid.visualizer {
+    height: calc(100% - 40px);
+}
+
+.data-view .mdl-card {
+    width: 100%;
+    height: calc(50% - 8px);
+}
+
+.data-view .mdl-card.bytes {
+    margin-top:16px;
+}
+
+.data-view .mdl-card .content{
+    height: calc(100% - 60px);
+    overflow: auto;
+}
+
+.crumbs-view {
+    margin: 0px;
+}
+
+.crumbs-view a.separator {
+    text-decoration: none;
+}
+
+.info-view {
+    padding: 0px;
+    margin: 0px;
+}
+
+.info-view .mdl-card__title-text {
+    font-size: 16px;
+}
+
+.info-view .mdl-list {
+    padding: 0px;
+    margin: 0px;
+}
+
+.info-view .mdl-list__item {
+    height: auto;
+    padding: 5px 16px;
+}
+
+.info-view .mdl-list__item .mdl-list__item-primary-content {
+    height: auto;
+    display: block;
+}
+
+.bytes-view .row {
+    font-family: Courier New,Consolas,Menlo,PT Mono,Liberation Mono,monospace;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.bytes-view .row {
+    margin: 0;
+    padding: 0 16px;
+}
+
+.bytes-view .row .address,
+.bytes-view .row .text,
+.bytes-view .row .hex {
+    padding: 0 8px;
+}
+
+.bytes-view .row .address {
+    background-color: #dddddd;
+}
+
+.bytes-view .row .address,
+.bytes-view .row .text span,
+.bytes-view .row .hex span {
+    display:inline-block;
+}
+
+.bytes-view .row .address{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.bytes-view .row .text span,
+.bytes-view .row .hex span {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.bytes-view .row .text span.selected-top,
+.bytes-view .row .hex span.selected-top {
+    border-top: 1px solid rgb(255, 64, 129);
+    margin-top: 0px;
+}
+.bytes-view .row .text span.selected-bottom,
+.bytes-view .row .hex span.selected-bottom {
+    border-bottom: 1px solid rgb(255, 64, 129);
+    margin-bottom: 0px;
+}
+
+.bytes-view .row .hex span {
+    padding: 0px 2px;
+}
+.bytes-view .row .hex span.first {
+    margin-left: 1px;
+    padding-left: 1px;
+}
+.bytes-view .row.selected .hex span:first-child,
+.bytes-view .row .hex span.selected-left {
+    border-left: 1px solid rgb(255, 64, 129);
+    margin-left: 0px;
+    padding-left: 1px;
+}
+.bytes-view .row .hex span.last {
+    margin-right: 1px;
+    padding-right: 1px;
+}
+.bytes-view .row.selected .hex span:last-child,
+.bytes-view .row .hex span.selected-right {
+    border-right: 1px solid rgb(255, 64, 129);
+    margin-right: 0px;
+    padding-right: 1px;
+}
+
+.bytes-view .row .text span {
+    padding: 0px 1px;
+}
+.bytes-view .row .text span.first {
+    margin-left: 1px;
+    padding-left: 0px;
+}
+.bytes-view .row.selected .text span:first-child,
+.bytes-view .row .text span.selected-left {
+    border-left: 1px solid rgb(255, 64, 129);
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.bytes-view .row .text span.last {
+    margin-right: 1px;
+    padding-right: 0px;
+}
+.bytes-view .row.selected .text span:last-child,
+.bytes-view .row .text span.selected-right {
+    border-right: 1px solid rgb(255, 64, 129);
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.bytes-view .row .hex span:nth-child(odd),
+.bytes-view .row .text span:nth-child(odd) {
+    background: #eeeeee;
+}
+
+.bytes-view .row .hex span.selected,
+.bytes-view .row .text span.selected {
+    background-color: rgba(255, 64, 129, 0.2);
+}
+
+.bytes-view .row .hex span.selected:nth-child(odd),
+.bytes-view .row .text span.selected:nth-child(odd) {
+    background-color: rgba(255, 64, 129, 0.3);
+}
+
+
+.bitstream-view .select-file-view {
+    width: 350px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.bitstream-view .select-file-view pre {
+    /* This can't be the only way to do it*/
+    display: table;
+    margin: auto;
+}
+
+.bitstream-view .select-file-view p .material-icons {
+    font-size: 14px;
+}
+
+.bitstream-view .loading-view {
+    width: 350px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.bitstream-view .select-file-view,
+.bitstream-view .file-error-view,
+.bitstream-view .loading-view,
+.bitstream-view .data-view {
+    display: none;
+}
+
+.bitstream-view.select-file .select-file-view,
+.bitstream-view.file-error .file-error-view,
+.bitstream-view.loading .loading-view,
+.bitstream-view.data .data-view {
+    display: block;
+}
